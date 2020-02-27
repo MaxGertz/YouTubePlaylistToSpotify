@@ -86,8 +86,6 @@ class CreatePlaylist:
                 else:
                     page_token = None
 
-        print(len(playlist_items))
-
         self.get_song_infos(playlist_items)
 
     def create_playlist(self):
@@ -108,8 +106,6 @@ class CreatePlaylist:
         )
         response_json = response.json()
 
-        print(response_json)
-
         # playlist id
         return response_json["id"]
 
@@ -126,7 +122,6 @@ class CreatePlaylist:
             }
         )
         response_json = response.json()
-        print(response_json)
         songs = response_json["tracks"]["items"]
 
         # only use the first song
