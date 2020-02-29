@@ -135,5 +135,4 @@ dmypy.json
 .pytype/
 
 .idea
-secrets.py
 client_secret.json
